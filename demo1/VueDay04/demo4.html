@@ -13,9 +13,15 @@
         <!-- 组建的标签位置标记了网页的渲染位置和内容 -->
     </div>
     <script>
-        // 组件注册
-        // 组件名称,组件对象
+        // 组件注册 java的类
+        // 组件名称,aaa既是组件名称又是标记名称
+        //组件对象，vue,css,template html
         Vue.component('aaa', {
+            /**
+            *组件中的data必须为一个函数
+            此函数必须有对象类型的返回值
+            
+            */
             data: function () {
                 return {
                     times: 0
