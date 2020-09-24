@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <aaa></aaa>
+        <!-- 组建的标签位置标记了网页的渲染位置和内容 -->
+    </div>
+    <script>
+        // 组件注册
+        // 组件名称,组件对象
+        Vue.component('aaa', {
+            data: function () {
+                return {
+                    times: 0
+                }
+            },
+            template: '<button @click="times++">本按钮被点击{{times}}次</button>'
+        });
+        let vm = new Vue({
+            el: "#app",
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(value,name) in dog">
+                {{value}}------------{{name}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        // var emps = [{
+        //         "empid": 123,
+        //         "ename": 'zhangsan',
+        //         "hiredate": "2020-01-01"
+        //     },
+        //     {
+        //         "empid": 1234,
+        //         "ename": 'zhangsan2',
+        //         "hiredate": "2020-01-01"
+        //     },
+        //     {
+        //         "empid": 12345,
+        //         "ename": 'zhangsan3',
+        //         "hiredate": "2020-01-01"
+        //     },
+        // ];
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                // emps: emps,
+                dog: {
+                    dogid: 123,
+                    dnm: 'Trump',
+                    weight: 123,
+                    owner: '12345',
+
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <!--获取变量 message Mustache语法 两个花括号 -->
+        {{number+1}}
+        {{false ? 'ok':'false'}}
+
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                number: 4
+
+            }
+        })
+    </script>
+</body>
+
+</html>

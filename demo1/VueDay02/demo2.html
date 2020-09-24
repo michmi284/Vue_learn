@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Vue demo1</title>
+    <title>Vue demo1</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:style="styleObject">111111111</div>
+        <script>
+            let vm = new Vue({
+                el: "#app",
+                data: {
+                    styleObject: {
+                        fontSize: '50px',
+                        color: 'aqua',
+
+                    }
+                },
+            });
+        </script>
+
+</body>
+
+</html>

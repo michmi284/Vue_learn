@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="s in css">
+                {{s.sid}}|{{s.snm}}|{{s.grade}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var students = [{
+                sid: 1,
+                snm: "zhangsan1",
+                grade: 1
+            },
+            {
+                sid: 2,
+                snm: "zhangsan2",
+                grade: 2
+            },
+            {
+                sid: 3,
+                snm: "zhangsan3",
+                grade: 3
+            },
+            {
+                sid: 4,
+                snm: "zhangsan4",
+                grade: 4
+            },
+            {
+                sid: 5,
+                snm: "zhangsan5",
+                grade: 5
+            },
+        ]
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                ss: students,
+            },
+            computed: {
+                css: function () {
+                    return this.ss.filter(function (student) {
+                        return student.grade > 2
+                    });
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

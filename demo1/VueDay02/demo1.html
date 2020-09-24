@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Vue demo1</title>
+    <script src="vue.js"></script>
+    <style>
+        .active {
+            background-color: red;
+        }
+
+        .text-danger {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:class="{'active': isActive,'text-danger':hasError}">11111</div>
+        <div v-bind:class="cc">123456</div>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                isActive: true,
+                hasError: true
+            },
+            computed: {
+                cc: function () {
+                    return {
+                        a: this.isActive,
+                        b: this.hasError
+                    }
+                }
+            },
+        });
+    </script>
+
+</body>
+
+</html>

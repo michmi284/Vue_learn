@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 组建的标签位置标记了网页的渲染位置和内容 -->
+        <el-button></el-button>
+    </div>
+    <script>
+        // 组件注册
+        // 组件名称"aaa"，既是组件名称，又是标记名称
+        //组件对象
+        Vue.component('el-button', {template: '<button>el-button</button>'});
+        let vm = new Vue({
+            el: "#app",
+        })
+    </script>
+</body>
+
+</html>

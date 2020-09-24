@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- :value="msg" -->
+        <input type="text" v-model="msg" placeholder="再次输入单位名称"> <br>
+        {{msg}}
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                msg: "东软睿道"
+            }
+        })
+    </script>
+</body>
+
+</html>

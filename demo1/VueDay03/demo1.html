@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-if="show">Hello V-IF</h1>
+        <h2 v-else>!!!!!!!!!!!</h2>
+
+        <!-- 批量渲染标签
+        标签<template>不参与渲染 -->
+        <template v-if="ok">
+            <h1>Title</h1>
+            <h2>I'm h2.</h2>
+            <h3>I'm h3.</h3>
+        </template>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                show: true,
+                ok: true,
+            }
+        });
+    </script>
+</body>
+
+</html>

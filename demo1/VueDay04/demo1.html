@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ selected }}
+        <select v-model="selected">
+            <!-- <select v-model="selected" multiple style=""> -->
+            <option disabled value="">---选择---</option>
+            <option v-for="op in options" value="op.val">{{op.text}}</option>
+            <!--<option value="2">B</option>
+            <option value="3">c</option> -->
+        </select>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                selected: '',
+                options: [{
+                        text: '1',
+                        val: 'A'
+                    },
+                    {
+                        text: '2',
+                        val: 'B'
+                    },
+                    {
+                        text: '3',
+                        val: 'C'
+                    },
+                    {
+                        text: '4',
+                        val: 'D'
+                    },
+                    {
+                        text: '5',
+                        val: 'E'
+                    },
+                    {
+                        text: '6',
+                        val: 'F'
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>

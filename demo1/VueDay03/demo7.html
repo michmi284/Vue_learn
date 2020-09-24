@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        业余爱好：
+        <input type="checkbox" v-model="checkedNames" value="足球">足球
+        <input type="checkbox" v-model="checkedNames" value="篮球">篮球
+        <input type="checkbox" v-model="checkedNames" value="排球">排球
+        <br>
+        {{checkedNames}}
+    </div>
+    <script>
+        let vm = new Vue({
+            el = "#app",
+            data: {
+                checkedNames: []
+            }
+        })
+    </script>
+</body>
+
+</html>

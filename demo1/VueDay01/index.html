@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <title>Vue demo</title>
+  <script src="vue.js"></script>
+  <style>
+    .h1c {
+      color: red;
+    }
+
+    .h2c {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" onmousedown="md()" value="abc">
+  <div id="app">
+    <!--{{msg}}-->
+    <!-- <span v-html="msg"></span> -->
+    <!-- <h1 v-bind:class="h">1111111111111</h1>
+    <button v-bind:disabled="true">按钮</button> -->
+    <!-- <button v-on:click="bc()">2222222222222222</button> -->
+    <input @Keydown.13="kd" v-model="v">
+    <ul>
+      <li v-for="item in items">
+        {{items}}
+      </li>
+    </ul>
+  </div>
+
+  <!-- <script>
+  function md(){
+    console.log("---------md--------------")
+  }
+  function bc(){
+    console.log("--------------bc---------------")
+  } -->
+  <!-- </script> -->
+
+  <script>
+    let vm = new Vue({
+      //必须挂载到一个根标签上
+      el: "#app",
+      data: {
+        // msg:"<h2>Hello Vue!</h2>"
+        // h: "h2c"
+        items: [
+          'aaaaaaaa',
+          'bbbbbbbb',
+          'cccccccc'
+        ],
+        v: "ddddd"
+      },
+      methods: {
+        function () {
+          this.items.push(this.v);
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>
